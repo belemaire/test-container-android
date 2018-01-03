@@ -21,7 +21,7 @@ gradle.projectsEvaluated {
 uploadArchives {
     repositories {
         mavenDeployer {
-            pom.version = '1.0.1'
+            pom.version = '1.0.2'
             pom.artifactId = 'refactor-ern-container'
             pom.groupId = 'com.walmartlabs.ern'
             repository(url: "file:///Users/blemair/.m2/repository")
