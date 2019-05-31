@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 WalmartLabs
+ * Copyright 2019 WalmartLabs
 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,8 +16,16 @@
 
 package com.walmartlabs.electrode.reactnative.bridge;
 
-import java.util.UUID;
-
-public interface Processor {
-    UUID execute();
+/**
+ * Interface that is returned by the request handler processors when a request is being registered.
+ * <p>
+ * Use this handle to properly unregister the request handler when not in use.
+ */
+public interface RequestHandlerHandle {
+    /**
+     * Unregisters a request handler.
+     *
+     * @return
+     */
+    boolean unregister();
 }
